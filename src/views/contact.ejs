@@ -1,0 +1,470 @@
+<%- include('common/header.ejs'); %>
+
+    <main id="main" class="site-main">
+        <!-- Title Bar HTML -->
+
+        <div class="contact-overlay overlay">
+            <section class="s-contact s-hero">
+                <div class="s-contact-bg">
+                    <div class="map-block">
+                        <div id="map"></div>
+                    </div>
+                    <div class="block-scroll color" data-scroll="#anchor">
+                        <div class="scroll-text">Scroll Down</div>
+                        <div class="scroll-arrow"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="contact-content">
+                        <div class="contact-hero-info">
+                            <h5 class="subtitle-block" data-aos="fade-right" data-aos-duration="1200">Contact</h5>
+
+                            <h1 class="title-section" data-aos="fade-right" data-aos-delay="300"
+                                data-aos-duration="1200">Contact</h1>
+
+                            <div class="title-small" data-aos="fade-right" data-aos-delay="400"
+                                data-aos-duration="1200">
+                                Kumar Law Firm </div>
+                        </div>
+                        <div class="contact-location-grid coll-3">
+                            <div data-aos="zoom-in">
+                                <div class="contact-location-item active" data-label="london" data-lat="51.50145"
+                                    data-lng="-0.09747">
+                                    <div class="contact-location-item-head">
+                                        <div class="title-small">Office Address</div>
+
+                                        <div class="lng small-text">India</div>
+                                    </div>
+                                    <div class="contact-location-item-description small-text">10 Old Burlington
+                                        Street<br>
+                                        London W1S 3AG</div>
+
+                                    <div class="contact-location-info small-text">+44 20 7195 1400</div>
+                                </div>
+                            </div>
+                            <div data-aos="zoom-in">
+                                <div class="contact-location-item " data-label="Auckland" data-lat="-36.844250"
+                                    data-lng="174.765800">
+                                    <div class="contact-location-item-head">
+                                        <div class="title-small">Auckland</div>
+
+                                        <div class="lng small-text">New Zealand</div>
+                                    </div>
+                                    <div class="contact-location-item-description small-text">PwC Tower<br>
+                                        Level 37<br>
+                                        15 Customs Street West<br>
+                                        Auckland 1010</div>
+
+                                    <div class="contact-location-info small-text">+64 9 973 5410</div>
+                                </div>
+                            </div>
+                            <div data-aos="zoom-in">
+                                <div class="contact-location-item " data-label="Geneva" data-lat="46.197660"
+                                    data-lng="6.146260">
+                                    <div class="contact-location-item-head">
+                                        <div class="title-small">Geneva</div>
+
+                                        <div class="lng small-text">Switzerland</div>
+                                    </div>
+                                    <div class="contact-location-item-description small-text">8, rue Saint-Léger<br>
+                                        CH-1205 Geneva<br>
+                                        Switzerland</div>
+
+                                    <div class="contact-location-info small-text">+41 22 704 06 60</div>
+                                </div>
+                            </div>
+                            <div data-aos="zoom-in">
+                                <div class="contact-location-item " data-label="Hong Kong" data-lat="22.283649"
+                                    data-lng="114.159332">
+                                    <div class="contact-location-item-head">
+                                        <div class="title-small">Hong Kong</div>
+
+                                        <div class="lng small-text">Hong Kong</div>
+                                    </div>
+                                    <div class="contact-location-item-description small-text">Suite 1802, LHT
+                                        Tower<br>
+                                        31 Queen’s Road Central<br>
+                                        Central, Hong Kong</div>
+
+                                    <div class="contact-location-info small-text">+852 3119 0135</div>
+                                </div>
+                            </div>
+                            <div data-aos="zoom-in">
+                                <div class="contact-location-item " data-label="Isle of Man" data-lat="54.3237188"
+                                    data-lng="-4.3878347">
+                                    <div class="contact-location-item-head">
+                                        <div class="title-small">Isle of Man</div>
+
+                                        <div class="lng small-text">Isle of Man</div>
+                                    </div>
+                                    <div class="contact-location-item-description small-text">Commerce House<br>
+                                        1 Bowring Road<br>
+                                        Ramsey<br>
+                                        Isle of Man<br>
+                                        IM8 2LQ</div>
+
+                                    <div class="contact-location-info small-text">+44 1624 811 611</div>
+                                </div>
+                            </div>
+                            <div data-aos="zoom-in">
+                                <div class="contact-location-item " data-label="Lisbon" data-lat="38.7167"
+                                    data-lng="-9.1333">
+                                    <div class="contact-location-item-head">
+                                        <div class="title-small">Lisbon</div>
+
+                                        <div class="lng small-text">Portugal</div>
+                                    </div>
+                                    <div class="contact-location-item-description small-text">Rua Barata
+                                        Salgueiro<br>
+                                        nº 30 7ºEsq/8º<br>
+                                        1250-044 Lisbon</div>
+
+                                    <div class="contact-location-info small-text">+351 21 359 21 80</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Map -->
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4D8Z_5S_PMcRowkik2G3S45JOQQsE8GA&amp;callback=initMap">
+            </script>
+        <script>
+            var map = null,
+                mapZoom = 5,
+                iconLocation = '../wp-content/themes/cbd/img/icons/icon-location.svg';
+            let customStyles = [{
+                "featureType": "administrative",
+                "elementType": "all",
+                "stylers": [{
+                    "hue": "#000000"
+                },
+                {
+                    "lightness": -100
+                },
+                {
+                    "visibility": "off"
+                }
+                ]
+            },
+            {
+                "featureType": "landscape",
+                "elementType": "geometry",
+                "stylers": [{
+                    "hue": "#dddddd"
+                },
+                {
+                    "saturation": -100
+                },
+                {
+                    "lightness": -3
+                },
+                {
+                    "visibility": "on"
+                }
+                ]
+            },
+            {
+                "featureType": "landscape",
+                "elementType": "labels",
+                "stylers": [{
+                    "hue": "#000000"
+                },
+                {
+                    "saturation": -100
+                },
+                {
+                    "lightness": -100
+                },
+                {
+                    "visibility": "off"
+                }
+                ]
+            },
+            {
+                "featureType": "poi",
+                "elementType": "all",
+                "stylers": [{
+                    "hue": "#000000"
+                },
+                {
+                    "saturation": -100
+                },
+                {
+                    "lightness": -100
+                },
+                {
+                    "visibility": "off"
+                }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "geometry",
+                "stylers": [{
+                    "hue": "#bbbbbb"
+                },
+                {
+                    "saturation": -100
+                },
+                {
+                    "lightness": 26
+                },
+                {
+                    "visibility": "on"
+                }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "labels",
+                "stylers": [{
+                    "hue": "#ffffff"
+                },
+                {
+                    "saturation": -100
+                },
+                {
+                    "lightness": 100
+                },
+                {
+                    "visibility": "off"
+                }
+                ]
+            },
+            {
+                "featureType": "road.local",
+                "elementType": "all",
+                "stylers": [{
+                    "hue": "#ffffff"
+                },
+                {
+                    "saturation": -100
+                },
+                {
+                    "lightness": 100
+                },
+                {
+                    "visibility": "on"
+                }
+                ]
+            },
+            {
+                "featureType": "transit",
+                "elementType": "labels",
+                "stylers": [{
+                    "hue": "#000000"
+                },
+                {
+                    "lightness": -100
+                },
+                {
+                    "visibility": "off"
+                }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "geometry",
+                "stylers": [{
+                    "hue": "#ffffff"
+                },
+                {
+                    "saturation": -100
+                },
+                {
+                    "lightness": 100
+                },
+                {
+                    "visibility": "on"
+                }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "labels",
+                "stylers": [{
+                    "hue": "#000000"
+                },
+                {
+                    "saturation": -100
+                },
+                {
+                    "lightness": -100
+                },
+                {
+                    "visibility": "off"
+                }
+                ]
+            }
+            ];
+
+            function initMap() {
+                map = new google.maps.Map(document.querySelector('#map'), {
+                    center: {
+                        lat: 52.357017,
+                        lng: 0.003725
+                    },
+                    zoom: mapZoom,
+                    zoomControlOptions: {
+                        position: google.maps.ControlPosition.LEFT_TOP
+                    },
+                    scrollwheel: false,
+                    streetViewControl: false,
+                    mapTypeControl: false,
+                    fullscreenControl: false,
+                    draggable: true,
+                    gestureHandling: 'cooperative',
+                    disableDefaultUI: true,
+                    styles: customStyles
+                });
+
+                let locations = document.querySelectorAll('.contact-location-item[data-label]');
+
+                for (const location of locations) {
+
+                    const marker = new google.maps.Marker({
+                        position: {
+                            lat: +location.dataset.lat,
+                            lng: +location.dataset.lng
+                        },
+                        icon: {
+                            url: iconLocation
+                        },
+                        map: map,
+                    });
+
+                    location.addEventListener('click', function () {
+
+                        let toggles = document.getElementsByClassName('location-open');
+
+                        if (this.classList.contains('location-open')) {
+                            this.classList.remove('location-open');
+                            map.panTo({
+                                lat: 52.357017,
+                                lng: 0.003725
+                            });
+                            map.setZoom(mapZoom);
+                        } else {
+                            while (toggles[0]) {
+                                toggles[0].classList.remove('location-open');
+                            }
+                            this.classList.add('location-open');
+                            map.panTo({
+                                lat: +location.dataset.lat,
+                                lng: +location.dataset.lng
+                            })
+                            map.setZoom(+mapZoom + 4);
+                        }
+
+                    });
+                }
+
+            };
+        </script>
+
+
+        <section id="anchor" class="s-contact-form">
+            <div class="parallax-img-box">
+                <img class="parallax-bg-down lazyload"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABhgAAAJ1AQAAAAADTMe7AAAAAnRSTlMAAHaTzTgAAACOSURBVHja7cEBDQAAAMKg909tDwcUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACvBuGjAAHXjUt/AAAAAElFTkSuQmCC"
+                    loading="lazy" alt="img"
+                    data-src="https://emxo588uoaz.exactdn.com/wp-content/uploads/2021/06/img-1-2.jpg?strip=all&lossy=1&w=1920&ssl=1"><noscript><img
+                        class="parallax-bg-down"
+                        src="../../emxo588uoaz.exactdn.com/wp-content/uploads/2021/06/img-1-2d3e2.jpg?strip=all&amp;lossy=1&amp;w=1920&amp;ssl=1"
+                        loading="lazy" alt="img" data-eio="l"></noscript>
+            </div>
+
+            <div class="container">
+                <div class="contact-form-content coll-2">
+                    <div class="contact-form-block">
+                        <script type="text/javascript"></script>
+                        <div class='gf_browser_gecko gform_wrapper gravity-theme' id='gform_wrapper_1'>
+                            <div id='gf_1' class='gform_anchor' tabindex='-1'></div>
+                            <div class='gform_heading'>
+                                <span class='gform_description'></span>
+                            </div>
+                            <form method='post' enctype='multipart/form-data' target='gform_ajax_frame_1' id='gform_1'
+                                action='https://alvariuminvestments.com/contact/#gf_1' novalidate>
+                                <div class='gform_body gform-body'>
+                                    <div id='gform_fields_1'
+                                        class='gform_fields top_label form_sublabel_below description_below'>
+                                        <div id="field_1_1"
+                                            class="gfield gf_left_half form-group gfield--width-half gfield_contains_required field_sublabel_below field_description_below hidden_label gfield_visibility_visible">
+                                            <label class='gfield_label' for='input_1_1'>Name<span
+                                                    class="gfield_required"><span
+                                                        class="gfield_required gfield_required_text">(Required)</span></span></label>
+                                            <div class='ginput_container ginput_container_text'><input name='input_1'
+                                                    id='input_1_1' type='text' value='' class='large' placeholder='NAME'
+                                                    aria-required="true" aria-invalid="false" />
+                                            </div>
+                                        </div>
+                                        <div id="field_1_2"
+                                            class="gfield gf_right_half form-group gfield--width-half gfield_contains_required field_sublabel_below field_description_below hidden_label gfield_visibility_visible">
+                                            <label class='gfield_label' for='input_1_2'>Email Address<span
+                                                    class="gfield_required"><span
+                                                        class="gfield_required gfield_required_text">(Required)</span></span></label>
+                                            <div class='ginput_container ginput_container_email'>
+                                                <input name='input_2' id='input_1_2' type='email' value='' class='large'
+                                                    placeholder='EMAIL ADDRESS' aria-required="true"
+                                                    aria-invalid="false" />
+                                            </div>
+                                        </div>
+
+                                        <div id="field_1_4"
+                                            class="gfield form-group field_sublabel_below field_description_below hidden_label gfield_visibility_visible">
+                                            <label class='gfield_label' for='input_1_4'>Message</label>
+                                            <div class='ginput_container ginput_container_textarea'><textarea
+                                                    name='input_4' id='input_1_4' class='textarea medium'
+                                                    placeholder='MESSAGE' aria-invalid="false" rows='10'
+                                                    cols='50'></textarea></div>
+                                        </div>
+                                        <div id="field_1_5"
+                                            class="gfield field_sublabel_below field_description_below gfield_visibility_visible">
+                                            <label class='gfield_label' for='input_1_5'>CAPTCHA</label>
+                                            <div id='input_1_5' class='ginput_container ginput_recaptcha'
+                                                data-sitekey='6Lf4_ZgbAAAAAOGip0cLURcITK1F7i8RL2BAoHYt'
+                                                data-theme='light' data-tabindex='-1' data-size='invisible'
+                                                data-badge='bottomright'></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='gform_footer top_label'> <input type='submit' id='gform_submit_button_1'
+                                        class='gform_button button' value='Send'
+                                        onclick='if(window["gf_submitting_1"]){return false;}  if( !jQuery("#gform_1")[0].checkValidity || jQuery("#gform_1")[0].checkValidity()){window["gf_submitting_1"]=true;}  '
+                                        onkeypress='if( event.keyCode == 13 ){ if(window["gf_submitting_1"]){return false;} if( !jQuery("#gform_1")[0].checkValidity || jQuery("#gform_1")[0].checkValidity()){window["gf_submitting_1"]=true;}  jQuery("#gform_1").trigger("submit",[true]); }' />
+                                    <input type='hidden' name='gform_ajax'
+                                        value='form_id=1&amp;title=&amp;description=1&amp;tabindex=0' />
+                                    <input type='hidden' class='gform_hidden' name='is_submit_1' value='1' />
+                                    <input type='hidden' class='gform_hidden' name='gform_submit' value='1' />
+
+                                    <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+                                    <input type='hidden' class='gform_hidden' name='state_1'
+                                        value='WyJbXSIsIjI3ZDFhYThlZTIwMmRkNTJkNmNjZDBjMDQxODVhNWM5Il0=' />
+                                    <input type='hidden' class='gform_hidden' name='gform_target_page_number_1'
+                                        id='gform_target_page_number_1' value='0' />
+                                    <input type='hidden' class='gform_hidden' name='gform_source_page_number_1'
+                                        id='gform_source_page_number_1' value='1' />
+                                    <input type='hidden' name='gform_field_values' value='' />
+
+                                </div>
+                            </form>
+                        </div>
+                        <iframe style='display:none;width:0px;height:0px;' src='about:blank' name='gform_ajax_frame_1'
+                            id='gform_ajax_frame_1'
+                            title='This iframe contains the logic required to handle Ajax powered Gravity Forms.'></iframe>
+                        <script type="text/javascript">
+                            gform.initializeOnLoaded(function () { gformInitSpinner(1, '../wp-content/plugins/gravityforms/images/spinner.svg'); jQuery('#gform_ajax_frame_1').on('load', function () { var contents = jQuery(this).contents().find('*').html(); var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0; if (!is_postback) { return; } var form_content = jQuery(this).contents().find('#gform_wrapper_1'); var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_1').length > 0; var is_redirect = contents.indexOf('gformRedirect(){') >= 0; var is_form = form_content.length > 0 && !is_redirect && !is_confirmation; var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100; if (is_form) { jQuery('#gform_wrapper_1').html(form_content.html()); if (form_content.hasClass('gform_validation_error')) { jQuery('#gform_wrapper_1').addClass('gform_validation_error'); } else { jQuery('#gform_wrapper_1').removeClass('gform_validation_error'); } setTimeout(function () { /* delay the scroll by 50 milliseconds to fix a bug in chrome */ jQuery(document).scrollTop(jQuery('#gform_wrapper_1').offset().top - mt); }, 50); if (window['gformInitDatepicker']) { gformInitDatepicker(); } if (window['gformInitPriceFields']) { gformInitPriceFields(); } var current_page = jQuery('#gform_source_page_number_1').val(); gformInitSpinner(1, '../wp-content/plugins/gravityforms/images/spinner.svg'); jQuery(document).trigger('gform_page_loaded', [1, current_page]); window['gf_submitting_1'] = false; } else if (!is_redirect) { var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html(); if (!confirmation_content) { confirmation_content = contents; } setTimeout(function () { jQuery('#gform_wrapper_1').replaceWith(confirmation_content); jQuery(document).scrollTop(jQuery('#gf_1').offset().top - mt); jQuery(document).trigger('gform_confirmation_loaded', [1]); window['gf_submitting_1'] = false; wp.a11y.speak(jQuery('#gform_confirmation_message_1').text()); }, 50); } else { jQuery('#gform_1').append(contents); if (window['gformRedirect']) { gformRedirect(); } } jQuery(document).trigger('gform_post_render', [1, current_page]); }); });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <%- include('common/footer.ejs'); %>

@@ -1,0 +1,14 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" width="29" height="29">
+	<title>Group 332</title>
+	<defs>
+		<image width="29" height="29" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAADXklEQVRIS72WS0wTYRDHZ1ZQwWB8ADHxEUm623gS+rUXL+LJqAe9dKtEoxCRqIkElHhRATU+4oOoUeMjPmJ87HJRE+56QZN2C3iRdjlgrNEoKmIsmNId8zVuU6rb3Vbi3jbff+Y3830z3zcIDr5edUlJBSzaQECLgaAcgGaTAcOCMKOKwBhHws8gQOxT7EPPqtbYuJ1LzCWIPGDlOAN2k0FfhOTkE3Hrq5iVfuiWbymUTW4CQ5iVTMIdd502YqW1hEYUT6MgGHHR33/fLvLs9Yhas00whFniZu3m32z/gIauseKyBXTa7Q+35gvL1kcVdnFsFPZ7m7RE5toUKAfOXQAnJL/W9q9A0z6qeo6PfQ13epsgDZ4CjSreLikQapkuYBqssItSQNtn/qeh/AzdgfCN6Qaa/oZUzy6XHL7O/1NQXqVCcXJtIUXjNMjXD9h2AaCHV3UKqqu+I6IcPOrUQaG6qMIOSAHtLPLGX5isbHBvCV926kxXvB2AuBERqomgH5Aei/5Qp539oOpr/gLvr6PezfzwM/EiV+NnOtNVXz8irMwGcLgoB2tygftuVy+fU1rEMKqyZknWLthFmToGxduBArZbacmgTjEQ6sjlS1e8LRhV2DEpoB12BLXI0rQloueiHKrNCVXZSdQfsbPiZu2AE+hQt4/sdC5/MOd9zm8pjDz07HVaRFbnmU+mEbWmFXXVe06UQ/vtMpiuM01lyu9GSQ4fcgL93dNW1TsgysFqOz+6wk6h/tDbIm4JddmJp7RNqk+hFhFX8+IBgmd2VWva6ypr5YXkx7jw0tUQfJsPuBDtgOquKqEyD/aeX1JSubRip8vfd6kQR/nY8F2NTYxcTZV3VPW0SXL4TD4OCtHqCjsoBrTT6VcGiox1brnvXiHOnNgMdvvqKf796Yrtg5/TjTykeBpd//M9NSPlPZT5wjvJwIkmqvquSHJwj6n9c0aaT+359K0dVFfYiW+j0J45nP1lGoTiufPYuenImGc49tVozjkNZkbNZ5rEJP5cUafdtcsme50XTREli82ZKHvdyYS/w0AhMf4j8aSmvn/YKgDe+KXJsk0g0MzJiR83eZVaaXNCTSM+0pTTovUIsAyQKolgDqExjCQsR4A4IHwkwjfv4iM9a+qHJ+x25hfXi3Xjb477PgAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #dcab35 } 
+	</style>
+	<g id="Group 332">
+		<path id="Ellipse 33" class="shp0" d="M14.5 19C12.01 19 10 16.99 10 14.5C10 12.01 12.01 10 14.5 10C16.99 10 19 12.01 19 14.5C19 16.99 16.99 19 14.5 19Z" />
+		<use id="Ellipse 35" href="#img1" transform="matrix(1,0,0,1,0,0)"/>
+	</g>
+</svg>
